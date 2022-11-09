@@ -1,0 +1,60 @@
+html,
+body {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	font-family: 'Press Start 2P', cursive;
+	background: #191820 !important;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+main {
+	width: 100%;
+	position: relative;
+	display: flex !important;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.options {
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: start;
+	margin-right: 50px;
+}
+
+.buttons {
+	align-items: start;
+}
+
+.level-form>p {
+	padding-left: 5px;
+	color: #fff;
+}
+
+.level-form>ul {
+	align-items: start !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	list-style-type: none;
+}
+
+canvas {
+	border: 1px solid white;
+}
+
+.died-container {
+	position: absolute !important;
+	display: none;
+}
+
+.died-container.active {
+	display: block;
+}

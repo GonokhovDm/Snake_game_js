@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sssnake</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="nes.css/css/nes.min.css">
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<main>
+		<section class="options">
+			<div class="buttons">
+				<button class="nes-btn is-success" id="start-btn" onclick="startFunction()">Start</button>
+				<button class="nes-btn is-disabled" id="pause-btn" onclick="pauseFunction()">Pause</button>
+			</div>
+
+			<form class="level-form">
+				<p>Level:</p>
+				<ul>
+					<li>
+						<label>
+							<input type="radio" id="radio-btn-1" class="nes-radio is-dark" name="level" value="easy" checked />
+							<span>Easy</span>
+						</label>
+					</li>
+
+					<li>
+						<label>
+							<input type="radio" id="radio-btn-2" class="nes-radio is-dark" name="level" value="normal" />
+							<span>Normal</span>
+						</label>
+					</li>
+
+					<li>
+						<label>
+							<input type="radio" id="radio-btn-3" class="nes-radio is-dark" name="level" value="hard" />
+							<span>Hard</span>
+						</label>
+					</li>
+				</ul>
+			</form>
+
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" id="checkbox-frame" class="frames-checkbox nes-checkbox is-dark" />
+					<span>Frames</span>
+				</label>
+			</div>
+
+			<div class="counter nes-container with-title is-centered is-dark">
+				<p class="title">Score:</p>
+				<p id="countResult">0</p>
+			</div>
+		</section>
+		<canvas id="game" width="400" height="400"></canvas>
+	</main>
+
+	<section>
+		<dialog class="nes-dialog is-dark" id="dialog-dark">
+			<form method="dialog">
+				<p class="title" id="score-title">Lol, you died!</p>
+				<p>Try again?</p>
+				<menu class="dialog-menu">
+					<button class="nes-btn is-primary" onclick="tryAgainFunction()">Yes</button>
+					<button class="nes-btn" onclick="ChangeLevelFunction()">Change level</button>
+				</menu>
+			</form>
+		</dialog>
+	</section>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
